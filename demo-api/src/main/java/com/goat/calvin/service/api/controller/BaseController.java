@@ -1,11 +1,14 @@
 package com.goat.calvin.service.api.controller;
 
-import com.goat.calvin.service.api.controller.base.ControllerBase;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.*;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * <p> 父类controller <p/>
@@ -13,8 +16,8 @@ import javax.servlet.http.HttpServletRequest;
  * @version 1.0.0
  * @since 2020/9/21 14:54
  */
-public class BaseController extends ControllerBase {
-
+public class BaseController{
+    volatile int x = 1;
     /**
      * 获取当前请求的相关信息
      * @return ServletRequestAttributes
@@ -25,13 +28,13 @@ public class BaseController extends ControllerBase {
         assert sra != null;
         return sra.getRequest();
     }
-//
-//    /** 解析token */
-//    public Result<UserInfoRes> analysisToken(String token, String appId){
-//        /**
-//         *  解析token
-//         */
-//        UserInfoRes userInfoRes = new UserInfoRes(true,"guest","guest",1302818420137586689L);
-//        return Result.successResult(userInfoRes);
-//    }
+
+    public static void main(String[] args) throws Exception {
+
+
+
+
+
+    }
+
 }
