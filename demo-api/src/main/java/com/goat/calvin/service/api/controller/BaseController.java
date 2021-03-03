@@ -28,13 +28,4 @@ public class BaseController{
         assert sra != null;
         return sra.getRequest();
     }
-
-    public static void main(String[] args) throws Exception {
-
-
-
-
-
-    }
-
 }
