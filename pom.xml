@@ -17,9 +17,8 @@
     <description>Demo project for Spring Boot</description>
     <packaging>pom</packaging>
     <modules>
-        <module>demo-infra</module>
-        <module>demo-domain</module>
-        <module>demo-api</module>
+        <module>shared</module>
+        <module>provider</module>
     </modules>
 
     <build>
