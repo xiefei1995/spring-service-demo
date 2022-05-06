@@ -127,7 +127,6 @@
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.9.6" level="project" />
     <orderEntry type="library" name="Maven: io.seata:seata-spring-boot-starter:1.4.0" level="project" />
     <orderEntry type="library" name="Maven: io.seata:seata-all:1.4.0" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-all:4.1.53.Final" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:druid:1.1.23" level="project" />
     <orderEntry type="library" name="Maven: com.typesafe:config:1.2.1" level="project" />
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />
@@ -195,5 +194,6 @@
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest:2.2" level="project" />
     <orderEntry type="library" name="Maven: com.netflix.curator:curator-recipes:1.3.3" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.12" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-all:4.1.35.Final" level="project" />
   </component>
 </module>

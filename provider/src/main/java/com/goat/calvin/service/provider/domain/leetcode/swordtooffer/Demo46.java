@@ -41,4 +41,26 @@ public class Demo46 {
     public static void main(String[] args) {
         System.out.println(translateNum(25));
     }
+
+    public static int translateNum2(int num) {
+        String s = String.valueOf(num);
+        if (s.length() < 2) {
+            return s.length();
+        }
+        char[] chars = s.toCharArray();
+        int[] dp = new int[chars.length + 1];
+        dp[0] = 1;
+        dp[1] = 1;
+
+        for (int i = 1; i < chars.length; i++) {
+            // 长度加一至少是当前的个数
+            dp[i + 1] = dp[i];
+            int temp = ((chars[i - 1] - '0') * 10 + chars[i] - '0');
+            if (9 < temp && temp < 26) {
+                dp[i + 1] = dp[i] + dp[i - 1];
+            }
+        }
+        return dp[chars.length];
+    }
+
 }

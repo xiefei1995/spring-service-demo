@@ -35,4 +35,15 @@ public class Demo55 {
         }
         return Math.max(deep(node.left), deep(node.right)) + 1;
     }
+
+    public int maxDepth(TreeNode root) {
+        // 根的高度是子节点 + 1
+        return deeps(root);
+    }
+
+
+    public int deeps(TreeNode node) {
+        if (null == node) return 0;
+       return Math.max(deeps(node.right), deeps(node.left)) + 1;
+    }
 }
