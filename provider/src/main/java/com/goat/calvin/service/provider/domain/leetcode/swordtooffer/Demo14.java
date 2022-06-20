@@ -18,41 +18,37 @@ public class Demo14 {
      * 贪心算法：先找到最有利的值，然后再找最后一个值的分配方式从而得到最合适的值
      */
 
-    int NUM_MOD = 1000000007;
-
+    int num = 1000000007;
     public int cuttingRope(int n) {
-        // 绳子每一段为3时得到的数据最好
-        if (n <= 3) return n - 1;
-        // 底数
-        long base = 3;
-        // 指数
-        int pow = n / 3;
-        // 余数
-        int last = n % 3;
-        long res = 1;
-        // 余数为2 直接 * 2
-        if (last == 2) {
-            return (int) (myPow(res, base, pow) * 2 % NUM_MOD);
+        if (n <= 3) {
+            return n - 1;
         }
-        // 余数为1 不如指数少一再* 4
-        if (last == 1) {
-            return (int) (myPow(res, base, pow - 1) * 4 % NUM_MOD);
-        }
-        return (int) (myPow(res, base, pow) % NUM_MOD);
+
+        return product(n / 3, n % 3) % num;
     }
 
-    // 求指定底数和指定幂数的积
-    public long myPow(long res, long base, long pow) {
-        while (pow > 0) {
-            // 指数幂为单数再乘一个底数，保证后面位运算的值
-            if ((pow & 1) == 1) {
-                res = res * base % NUM_MOD;
-            }
-            // 指数幂右移一位（除以二），例子 8^2 = 64^1
-            pow = pow >> 1;
-            base = base * base % NUM_MOD;
+    public int product(int con, int remain) {
+        int result = 0;
+        if (remain == 0) {
+            result = 3 ^ con;
+        } else if (remain == 1) {
+            result = (3 ^ (con - 1)) * 4;
+        } else {
+            result = (3 ^ con) * remain;
         }
-        return res;
+        return result;
     }
 
+    public int sum(int con){
+        int result = 1;
+        for (int i = 0; i < con ; i++) {
+           result = result * 3;
+        }
+        return result;
+    }
+
+
+    public static void main(String[] args) {
+        System.out.println(3 ^ 3);
+    }
 }

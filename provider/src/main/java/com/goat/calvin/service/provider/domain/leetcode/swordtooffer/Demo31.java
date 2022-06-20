@@ -1,5 +1,7 @@
 package com.goat.calvin.service.provider.domain.leetcode.swordtooffer;
 
+import java.util.Stack;
+
 /**
  * @author xiefei
  * @date 2022/4/14 9:56
@@ -14,9 +16,17 @@ public class Demo31 {
     public boolean validateStackSequences(int[] pushed, int[] popped) {
         // 判断出栈和入栈是否一致
         // 这里的出栈和入栈是同时进行的
-
-
-
-        return false;
+        // 定义一个栈来模拟放入的过程：先进后出
+        Stack<Integer> stack = new Stack<>();
+        int popIndex = 0;
+        for (int i = 0; i < pushed.length; i++) {
+            stack.push(pushed[i]);
+            // 放入栈时比较是否符合出栈的顺序，直到stack为空
+            while (!stack.isEmpty() && stack.peek() == popped[popIndex]) {
+                stack.pop();
+                popIndex++;
+            }
+        }
+        return stack.isEmpty();
     }
 }

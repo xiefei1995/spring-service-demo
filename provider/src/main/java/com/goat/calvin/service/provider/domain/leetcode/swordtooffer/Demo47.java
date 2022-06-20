@@ -12,12 +12,19 @@ public class Demo47 {
      * 给定一个棋盘及其上面的礼物的价值，请计算你最多能拿到多少价值的礼物？
      */
 
+
     public int maxValue(int[][] grid) {
-
-
-
-
-
-        return 1;
+        // 最后一个是确定的，只需要找前面一个最大的就ok
+        int row = grid.length;
+        int col = grid[0].length;
+        // 将每一个点都算出来，不剪枝，最后直接取目标
+        int[][] dp = new int[row + 1][col + 1];
+        for (int i = 1; i <= row; i++) {
+            for (int j = 1; j <= col; j++) {
+                // 因为坐标是从1开始，所以这里i相当于是下一个坐标，i-1才是当前坐标
+                dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]) + grid[i - 1][j - 1];
+            }
+        }
+        return dp[row][col];
     }
 }
