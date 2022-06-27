@@ -2,10 +2,6 @@ package com.goat.calvin.service.provider.domain.leetcode.daylywork;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.List;
-import java.util.Queue;
-import java.util.concurrent.BlockingQueue;
-
 /**
  * @author xiefei
  * @date 2022/6/23 9:00
