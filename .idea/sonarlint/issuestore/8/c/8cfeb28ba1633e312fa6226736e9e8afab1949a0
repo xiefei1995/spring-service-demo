@@ -1,0 +1,11 @@
+
+E
+java:S3740"/Provide the parametrized type for this generic.(ÂŒêÂ
+‚
+java:S2273 "`Move this call to "notify()" into a synchronized block to be sure the monitor on "Task" is held.(Ó½©¥ûÿÿÿÿ8±š³²0
+R
+java:S2446 "0"notify" may not wake up the appropriate thread.(Ó½©¥ûÿÿÿÿ8±š³²0
+s
+java:S2273$"^Move this call to "wait()" into a synchronized block to be sure the monitor on "Task" is held.(€ŒÔ@
+O
+java:S2274$":Remove this call to "wait" or move it into a "while" loop.(€ŒÔ@
