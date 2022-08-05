@@ -8,7 +8,7 @@ public class MyCalendar {
 	/**
 	 * 二叉树辅助
 	 */
-	class TreeNode {
+	static class TreeNode {
 		private TreeNode left;
 		private TreeNode right;
 		private int start;
@@ -20,13 +20,13 @@ public class MyCalendar {
 		}
 	}
 
-	TreeNode root;
+	static TreeNode root;
 
 	public MyCalendar() {
 
 	}
 
-	public boolean book(int start, int end) {
+	public static boolean book(int start, int end) {
 		if (root == null) {
 			root = new TreeNode(start, end);
 			return true;
